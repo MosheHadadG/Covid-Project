@@ -45,7 +45,7 @@ export const config = {
     plugins: {
       title: {
         display: true,
-        text: (ctx) => 'Point Style: ' + ctx.chart.data.datasets[0].pointStyle,
+        text: 'Statistic Covid',
       }
     }
   }

@@ -19,18 +19,17 @@ export async function getContinent() {
     const countries = { name: countryName, code: countryCode }
     states.push(countries);
     getCoronaEachCountry(countryCode)
-
   });
 }
 
 export async function getCoronaEachCountry(countryCode) {
+  removeData(myChart)
   try {
     const responseCorona = await fetch(`https://corona-api.com/countries/${countryCode}`);
     if (!responseCorona.ok) {
       throw new Error('not found')
     }
     else {
-      removeData(myChart)
       const countryCorona = await responseCorona.json();
       const lastData = countryCorona.data.latest_data;
       const todayData = countryCorona.data.today;
