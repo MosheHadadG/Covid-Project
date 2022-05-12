@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+
+    <div class="SelectBoxContinent">
+      <select id="selectContinent">
+        <option value="europe">Europe</option>
+        <option value="asia">Asia</option>
+        <option value="africa">Africa</option>
+        <option value="americas">America</option>
+      </select>
+    </div>
+
+    <div class="coronaInfo">
+      <button id="confirmed">Confirmed</button>
+      <button id="deaths">Deaths</button>
+      <button id="recovered">Recovered</button>
+      <button id="critical">Critical</button>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Calibri;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: #b0a295;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.box {
+  width: 90vmin;
+}
+.SelectBoxContinent {
+  margin-bottom: 1%;
+
+}
+select {
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  color: white;
+  background-color: #557a95;
+  font-size: large;
+  transition: 0.3s;
+}
+
+select:hover {
+  background-color: #6c8393;
+}
+
+.coronaInfo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 4%;
+}
+
+button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #a55f81;
+  transition: 0.3s;
+  color: #ffff;
+  font-size: 1rem;
+  cursor: pointer;
+}
