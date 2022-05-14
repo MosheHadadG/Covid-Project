@@ -1,13 +1,12 @@
-import { addLabel, myChart, removeData, addData, removeLabels, data } from "./chart.js";
+import { addLabel, myChart, removeData, addData, removeLabels, changeTitle} from "./chart.js";
 import { selectBoxCountry } from "./constante/constante.js";
 
-let continentArray;
 export const states = {
   data: '',
-  continent: ''
+  continent: '',
+  country: ''
 }
-
-
+let continentArray;
 export async function getContinent() {
   removeLabels(myChart);
   removeData(myChart);
@@ -36,8 +35,8 @@ export async function getContinent() {
 
 
 export async function getCoronaCountries() {
-  
   removeData(myChart);
+  changeTitle(myChart, states.data);
   try {
     const responeCountries = await fetch(`https://corona-api.com/countries`);
     const countries = await responeCountries.json();
@@ -47,7 +46,8 @@ export async function getCoronaCountries() {
           addData(myChart, country.latest_data[states.data]);
         }
       })
-    })
+    });
+
   } catch (err) {
     console.log(err);
   }
@@ -60,10 +60,10 @@ function getCoronaCode(countryName) {
   return findCountry.code;
 }
 
-export async function getCoronaEachCountry(countryName) {
+export async function getCoronaEachCountry() {
   removeLabels(myChart);
   removeData(myChart);
-  let countryCode = getCoronaCode(countryName)
+  let countryCode = getCoronaCode(states.country)
 
   try {
     const responseCorona = await fetch(`https://corona-api.com/countries/${countryCode}`);

@@ -15,20 +15,37 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
 }
 
 .chartBox {
-  width: 90vmin;
+  width: 100vmin;
+  height: 100vmin;
 }
-.SelectsBox {
-  margin-bottom: 1%;
 
+
+.inputsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  width: 30%;
+  height: 100%;
 }
+
+.selectsBox {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 4%;
+}
+
 select {
+  padding: 0 1rem;
   height: 30px;
   border-radius: 5px;
   border: none;
@@ -38,6 +55,10 @@ select {
   font-size: large;
   transition: 0.3s;
 }
+
+/* .selectBoxCountry {
+  width: 100%;
+} */
 
 select:hover {
   background-color: #6c8393;
@@ -51,12 +72,31 @@ select:hover {
 }
 
 button {
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  background-color: #a55f81;
-  transition: 0.3s;
-  color: #ffff;
-  font-size: 1rem;
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
   cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+button:focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+button:hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }

@@ -7,35 +7,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
   <link rel="stylesheet" href="styles/style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="styles/responsive.css">
+  <title>Statistic Covid</title>
 </head>
 
 <body>
   <div class="container">
 
-      <div class="chartBox">
-        <canvas id="myChart" width="400" height="400"></canvas>
+    <div class="chartBox">
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    <div class="inputsBox">
+      <div class="selectsBox">
+        <select id="selectContinent">
+          <option value="" disabled selected>Choose Contintet</option>
+          <option value="europe">Europe</option>
+          <option value="asia">Asia</option>
+          <option value="africa">Africa</option>
+          <option value="americas">America</option>
+        </select>
+
+        <select id="selectBoxCountry">
+          <option value="" disabled selected>Choose Country</option>
+        </select>
       </div>
 
-    <div class="SelectsBox">
-      <select id="selectContinent">
-        <option value="" disabled selected>Choose Contintet</option>
-        <option value="europe">Europe</option>
-        <option value="asia">Asia</option>
-        <option value="africa">Africa</option>
-        <option value="americas">America</option>
-      </select>
+      <div class="coronaInfo">
+        <button id="confirmed">Confirmed</button>
+        <button id="deaths">Deaths</button>
+        <button id="recovered">Recovered</button>
+        <button id="critical">Critical</button>
+      </div>
 
-      <select id="selectBoxCountry">
-        <option value="" disabled selected>Choose Country</option>
-      </select>
-    </div>
-
-    <div class="coronaInfo">
-      <button id="confirmed">Confirmed</button>
-      <button id="deaths">Deaths</button>
-      <button id="recovered">Recovered</button>
-      <button id="critical">Critical</button>
     </div>
   </div>
 

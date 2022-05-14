@@ -8,12 +8,13 @@ export function selectBoxContEvent(event) {
 }
 
 export function coronaInfoBtn(event) {
-  let idBtn = event.target.getAttribute('id');
-  states.data = idBtn;
+  let typeData = event.target.getAttribute('id');
+  states.data = typeData;
   getCoronaCountries();
 }
 
 export function selectBoxCountryEvent(event) {
   let country = event.target.value
-  getCoronaEachCountry(country)
+  states.country = country;
+  getCoronaEachCountry()
 }
