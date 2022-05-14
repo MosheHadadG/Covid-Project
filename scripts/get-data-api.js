@@ -16,7 +16,7 @@ export async function getContinent() {
     const responseContinent = await
     fetch(`https://nameless-citadel-58066.herokuapp.com/https://restcountries.herokuapp.com/api/v1/region/${states.continent}`);
     const continents = await responseContinent.json();
-    selectBoxCountry.innerHTML = "";
+    selectBoxCountry.innerHTML = '<option value="" disabled selected>Choose Country</option>';
     continents.forEach((country) => {
       const countryCode = country.cca2;
       const countryName = country.name.common;
