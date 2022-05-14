@@ -3,38 +3,21 @@ export const ctx = document.getElementById("myChart").getContext("2d");
 let gradient = ctx.createLinearGradient(0, 0, 0, 500);
 gradient.addColorStop(0, "#557a95");
 gradient.addColorStop(1, "#557a95");
-const actions = [
-  {
-    handler: (chart) => {
-      chart.data.datasets.forEach(dataset => {
-        dataset.pointStyle = 'cirlce';
-      });
-      chart.update();
-    }
-  },
-  {
-    handler: (chart) => {
-      chart.data.datasets.forEach(dataset => {
-        dataset.pointStyle = 'cross';
-        chart.update();
-      });
-  }
-  }
-];
 
 export const data = {
   labels: [],
-  datasets: [
-    {
+  datasets: [{
       label: 'Covid',
-      data: [],
+      data: ['ss'],
       borderColor: "#fff",
-      backgroundColor: gradient,
+      backgroundColor: ["#115f9a", "#1984c5", "#22a7f0", "#48b5c4", "#76c68f", "#a6d75b", "#c9e52f", "#d0ee11", "#d0f400"]
+      ,
       pointStyle: 'circle',
       pointRadius: 5,
       pointHoverRadius: 8
-    }
-  ]
+    }]
+    
+
 };
 
 export const config = {
@@ -76,4 +59,4 @@ export function removeData(myChart) {
   myChart.update();
 }
 
-export const myChart = new Chart(ctx, config, actions);
+export const myChart = new Chart(ctx, config);

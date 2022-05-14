@@ -12,16 +12,22 @@
 
 <body>
   <div class="container">
-    <div class="box">
-      <canvas id="myChart" width="400" height="400"></canvas>
-    </div>
 
-    <div class="SelectBoxContinent">
+      <div class="chartBox">
+        <canvas id="myChart" width="400" height="400"></canvas>
+      </div>
+
+    <div class="SelectsBox">
       <select id="selectContinent">
+        <option value="" disabled selected>Choose Contintet</option>
         <option value="europe">Europe</option>
         <option value="asia">Asia</option>
         <option value="africa">Africa</option>
         <option value="americas">America</option>
+      </select>
+
+      <select id="selectBoxCountry">
+        <option value="" disabled selected>Choose Country</option>
       </select>
     </div>
 

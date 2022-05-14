@@ -21,10 +21,10 @@ body {
   width: 100vw;
 }
 
-.box {
+.chartBox {
   width: 90vmin;
 }
-.SelectBoxContinent {
+.SelectsBox {
   margin-bottom: 1%;
 
 }
